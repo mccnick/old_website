@@ -4,15 +4,21 @@
     <meta charset="UTF-8" />
     <title>Nick McCullough's Portfolio</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+      html,
+      body {
+        scroll-behavior: smooth;
+      }
+    </style>
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="tab-container">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
+          <li class="tab" id="tab1"><a href="#about">Nick McCullough</a></li>
+          <li class="tab" id="tab2"><a href="#experience">Experience</a></li>
+          <li class="tab" id="tab3"><a href="#projects">Projects</a></li>
+          <li class="tab" id="tab4"><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -22,8 +28,7 @@
         This is my first website and will be using it as my portfolio on GitHub
         Pages.
       </p>
-
-      <h2>About Me</h2>
+      <h2 id="about">About Me</h2>
       <p>
         I'm currently a rising Junior at Iowa State University majoring in
         Software Engineering. I have experience with Java, Python, C/C++,
@@ -33,7 +38,7 @@
         helping people and making cool stuff ☺
       </p>
 
-      <h2>
+      <h2 id="experience">
         Professional Experience -
         <a
           href="https://drive.google.com/file/d/1YG5odbzS6yKjkB5AG4blCoKE7mjjN-I-/view?usp=share_link"
@@ -71,9 +76,11 @@
         interested in fintech internships with my previous finance industry
         experience.
       </p>
-      <h2>Projects</h2>
+
+      <h2 id="projects">Projects</h2>
       <p>Please check my GitHub profile.</p>
-      <h2>Contact</h2>
+
+      <h2 id="contact">Contact</h2>
       <p>You can reach me via email. Connect with me on LinkedIn and GitHub!</p>
       <ul>
         <li><a href="mailto:nickmcc@iastate.edu">Email</a></li>
@@ -84,7 +91,29 @@
       </ul>
     </main>
     <footer>&copy; 2023 Nick McCullough | All rights reserved</footer>
-    <script src="js/three.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      function openTab(tabNumber) {
+        // Hide all content divs
+        var contents = document.getElementsByClassName("content");
+        for (var i = 0; i < contents.length; i++) {
+          contents[i].style.display = "none";
+        }
+
+        // Show the selected content div
+        var content = document.getElementById("content" + tabNumber);
+        content.style.display = "block";
+
+        // Remove 'active' class from all tabs
+        var tabs = document.getElementsByClassName("tab");
+        for (var i = 0; i < tabs.length; i++) {
+          tabs[i].classList.remove("active");
+        }
+
+        // Add 'active' class to the selected tab
+        var tab = document.getElementById("tab" + tabNumber);
+        tab.classList.add("active");
+      }
+    </script>
   </body>
 </html>
