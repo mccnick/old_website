@@ -1,14 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
 /* Reset default browser styles */
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
 }
 
 /* Global styles */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #333;
+  font-family: "Open Sans", Arial, sans-serif;
+  background-color: #303030;
   color: #dbdbdb;
+}
+
+h1 {
+  font-size: 200%; /* makes font bigger on 50% */
+}
+
+/* Add a container to hold the text and image */
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items vertically */
+  text-align: center;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .welcome-container {
+    flex-direction: row;
+    justify-content: right; /* Center items horizontally */
+    text-align: left;
+  }
+
+  .welcome-container h1 {
+    margin-right: 10px;
+  }
 }
 
 .container {
@@ -48,13 +76,15 @@ ul.company-list {
 }
 
 .company-list img {
-  max-width: 30%;
+  max-width: 92%;
   height: auto;
 }
 
 .tab-container {
   display: flex;
-  background-color: #333;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background-color: #303030;
 }
 
 .tab {
@@ -75,6 +105,17 @@ ul.company-list {
 
 .tab.active a {
   color: #fff;
+}
+
+/* Center the contact links */
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Adjust the gap value as desired */
+}
+
+.contact-links a {
+  margin: 0 10px; /* Adjust the margin value as desired */
 }
 
 .content {
@@ -108,6 +149,20 @@ nav ul li a {
 
 nav ul li a:hover {
   background-color: #555;
+}
+
+.button-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #006dea;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+}
+
+.button-link:hover {
+  background-color: #0056b3;
 }
 
 /* Footer styles */

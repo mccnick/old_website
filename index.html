@@ -9,34 +9,66 @@
       body {
         scroll-behavior: smooth;
       }
+      .skills-list {
+        display: flex;
+        justify-content: center;
+      }
+
+      .skills-list img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      h1 {
+        font-size: 230%; /* makes font bigger on 50% */
+      }
     </style>
   </head>
   <body>
     <header>
       <nav class="tab-container">
         <ul>
-          <li class="tab" id="tab1"><a href="#about">Nick McCullough</a></li>
+          <li class="tab" id="tab4"><a href="#contact-links">Contact</a></li>
+          <li class="tab" id="tab1"><a href="#about">About</a></li>
           <li class="tab" id="tab2"><a href="#experience">Experience</a></li>
           <li class="tab" id="tab3"><a href="#projects">Projects</a></li>
-          <li class="tab" id="tab4"><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
     <main class="container">
-      <h1>Welcome! I'm Nick McCullough.</h1>
-      <p>
-        This is my first website and will be using it as my portfolio on GitHub
-        Pages.
-      </p>
-      <h2 id="about">About Me</h2>
+    
+      <div class="welcome-container">
+        <h1>Welcome! I'm Nick McCullough, software engineer.</h1>
+        <img src="images/profilepic.png" alt="profile pic" />
+        <p>⬆ and that's Ollie!</p>
+        <p></p>
+      </div>
+      <p></p>
+      <div class="contact-links" id="contact-links">
+        <a class="button-link" href="mailto:nickmcc@iastate.edu">Email</a>
+        <a class="button-link" href="https://www.linkedin.com/in/mccnick"
+          >LinkedIn</a
+        >
+        <a class="button-link" href="https://github.com/mccnick">GitHub</a>
+      </div>
+      <p></p>
+      <p></p>
+      <h2 id="about"></h2>
+      <h2>About Me / Skills</h2>
       <p>
         I'm currently a rising Junior at Iowa State University majoring in
         Software Engineering. I have experience with Java, Python, C/C++,
         HTML/CSS/JS. I have experience with backend engineering through my SWE
-        Internship @ John Deere and Iowa State coursework. I also enjoy
-        front-end development through self-learning. I enjoy solving problems,
-        helping people and making cool stuff ☺
+        Internship @ John Deere and Iowa State coursework. I am also enjoying
+        front-end development through self-learning building this website and my
+        first app. I eventually want to learn threeJS and make a more
+        professional portfolio. I enjoy solving problems, helping people and
+        making cool stuff ☺
       </p>
+
+      <ul class="skills-list">
+        <img src="images/skills.jpg" alt="John Deere" />
+      </ul>
 
       <h2 id="experience">
         Professional Experience -
@@ -48,11 +80,20 @@
       </h2>
       <p></p>
       <p class="company-heading">I have worked at these companies:</p>
-      <ul class="company-list">
-        <img src="images/johndeere.jpg" alt="John Deere" />
-        <img src="images/wellsfargo.jpg" alt="Wells Fargo" />
-        <img src="images/tfs.jpg" alt="Toyota Financial Services" />
-      </ul>
+      <div class="company-list">
+        <div class="company-container">
+          <img src="images/johndeere.jpg" alt="John Deere" />
+          <p>Software Engineering Intern 2022-2023</p>
+        </div>
+        <div class="company-container">
+          <img src="images/wellsfargo.jpg" alt="Wells Fargo" />
+          <p>Finance Specialist 2020-2022</p>
+        </div>
+        <div class="company-container">
+          <img src="images/tfs.jpg" alt="Toyota Financial Services" />
+          <p>Finance Specialist 2013-2019</p>
+        </div>
+      </div>
 
       <p>
         I went back to school for engineering in my late twenties after about
@@ -66,29 +107,51 @@
         I decided I enjoyed programming and switched my major. My entire
         sophomore year at Iowa State I was a Software Engineering Intern at John
         Deere (20 hrs/wk) working on vehicle software testing and was exposed to
-        multiple technologies including Java/C/C++ and GPS/Navigation methods.
+        multiple technologies including Java, C/C++ and GPS/Navigation methods.
+        I also helped them manage tractor data using Python and MATLAB.
       </p>
       <h2>Currently Seeking</h2>
       <p>
-        I am currently seeking SWE Internships for Spring & Summer 2024. I am
-        interested in GPS/Navigation for any tech company with a Maps platform
-        or avionics/satellite application for an aerospace company. I am also
-        interested in fintech internships with my previous finance industry
-        experience.
+        I am currently seeking SWE Internships for Spring & Summer 2024! (and
+        potentially Fall 2024)
+      </p>
+      <p>
+        I am interested in GPS/Navigation for any tech company with a Maps
+        platform or avionics/satellite application for an aerospace company. I
+        am also interested in fintech internships with my previous finance
+        industry experience.
       </p>
 
-      <h2 id="projects">Projects</h2>
-      <p>Please check my GitHub profile.</p>
+      <h2 id="projects">What am I currently working on?</h2>
+      <p>Building:</p>
+      <p>
+        I am building my first app! I am working on a fairly large solo project
+        involving building an app from scratch using React Native and
+        Google/Apple Maps API to help Iowa State Students. I don't have an
+        urgent timeline for this as I'm very busy with school, but I also want
+        to make sure it's the quality I expect of myself before it's released. I
+        plan on finishing it within this next year along with unit testing in
+        small batches. If you'd like to know more about the app, feel free to
+        reach out to me!
+      </p>
+      <p>Self-Learning:</p>
+      <p>
+        I am trying to focus on solving algorithm problems as I know it is an
+        important skill to have as a software engineer. I am currently focusing
+        on my full-stack development skills. A majority of my early coursework
+        at Iowa State involved back-end engineering projects in Java. I am
+        actively teaching myself about ReactJS, React Native, Front-End
+        Frameworks, UI/UX. In addition, I'm learning on my own about version
+        control with Git and GitHub. I'm just finishing up my sophomore year,
+        and we haven't touched these subjects yet in school so I'm making sure
+        to learn them on my own.
+      </p>
 
-      <h2 id="contact">Contact</h2>
-      <p>You can reach me via email. Connect with me on LinkedIn and GitHub!</p>
-      <ul>
-        <li><a href="mailto:nickmcc@iastate.edu">Email</a></li>
-        <li>
-          <a href="https://www.linkedin.com/in/mccnick">LinkedIn</a>
-        </li>
-        <li><a href="https://github.com/mccnick">GitHub</a></li>
-      </ul>
+      <h2>Projects</h2>
+      <p>
+        Please check my GitHub profile, I made a lot of effort to showcase them
+        there.
+      </p>
     </main>
     <footer>&copy; 2023 Nick McCullough | All rights reserved</footer>
     <script src="js/script.js"></script>
