@@ -40,6 +40,18 @@ body, html {
     margin-top: 0;
   }
   
+  .company-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .company-list img {
+    max-width: 30%;
+    height: auto;
+  }
+  
 
   /* Navigation bar styles */
   nav {
