@@ -83,11 +83,11 @@ a {
   0% {
     transform: translateX(0%);
   }
-  20% {
-    transform: translateX(20%);
+  33.33% {
+    transform: translateX(33.33%);
   }
-  80% {
-    transform: translateX(80%);
+  66.66% {
+    transform: translateX(66.66%);
   }
   100% {
     transform: translateX(0%);
