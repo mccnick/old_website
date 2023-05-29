@@ -7,12 +7,27 @@ html {
   padding: 0;
 }
 
+body {
+  background-image: url('images/NASAportfolio.png');
+  background-size: cover;
+}
+
 /* Global styles */
 body {
   font-family: "Open Sans", Arial, sans-serif;
   background-color: #303030;
   color: #dbdbdb;
 }
+
+.container,
+.welcome-container,
+.company-container,
+.tab-container,
+.contact-links,
+.content {
+  background-color: rgba(0, 0, 0, 1.0); /* Adjust the transparency (0.5) as desired */
+}
+
 
 h1 {
   font-size: 200%; /* makes font bigger on 50% */
@@ -67,32 +82,30 @@ a {
 }
 
 .company-container {
-  display: inline-block;
+  display: flex;
   white-space: nowrap;
   position: relative;
   animation: scrollRight 10s linear infinite;
+  animation-timing-function: steps(30);
+  animation-play-state: running; /* Added animation-play-state property */
 }
 
 .company-content {
   display: inline-block;
   vertical-align: top;
-  margin-right: 20px; /* Adjust as needed */
+  margin-right: 20px;
 }
 
 @keyframes scrollRight {
   0% {
     transform: translateX(0%);
   }
-  33.33% {
-    transform: translateX(33.33%);
-  }
-  66.66% {
-    transform: translateX(66.66%);
-  }
   100% {
-    transform: translateX(0%);
+    transform: translateX(-100%);
   }
 }
+
+
 
 /* Bullet formatting */
 p.company-heading {
