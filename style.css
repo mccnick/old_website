@@ -73,18 +73,30 @@ a {
 
 /* Company List Styles */
 .company-list {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of company containers */
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
 .company-container {
-  display: flex;
-  align-items: center;
+  flex: 0 0 calc(33.33% - 10px); /* Set width for each company container */
+  margin-bottom: 10px;
 }
 
-/* Bullet formatting */
+.company-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.company-content p {
+  margin-top: 5px;
+}
+
+
+/* Company Bullet formatting */
 p.company-heading {
   margin-top: 0;
 }
@@ -93,17 +105,11 @@ ul.company-list {
   margin-top: 0;
 }
 
-.company-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
-}
-
 .company-list img {
-  max-width: 92%;
+  width: 100%;
   height: auto;
 }
+
 
 /* Tab Container Styles */
 .tab-container {
@@ -171,7 +177,8 @@ ul.company-list {
 }
 
 .ollie p {
-  margin: 5px 0;
+  margin: 15px 0;
+  margin-bottom: 25px;
 }
 
 
