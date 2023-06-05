@@ -12,9 +12,6 @@ body {
   font-family: "Open Sans", Arial, sans-serif;
   background-color: #000000;
   color: #dbdbdb;
-}
-
-body {
   background-image: url("images/NASAportfolio.png");
   background-size: cover;
 }
@@ -26,25 +23,59 @@ body {
 .tab-container,
 .contact-links,
 .content {
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgb(0, 0, 0, 0);
 }
 
 .container {
-  background-color: #000000; /* Replace with your desired background color */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.35
+  ); /* Replace the last value (0.5) with your desired opacity */
   max-width: 960px;
   margin: 0 auto;
   padding: 20px;
 }
 
+.divider {
+  position: relative;
+  margin: 20px 0;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #dbdbdb;
+  transform: translateY(-50%);
+  z-index: -1;
+}
 
 /* Typography Styles */
+h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: white; /* Set the font color to white */
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* Apply the outline effect */
+}
+
 h1 {
   font-size: 28px;
   margin-bottom: 20px;
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
 }
 
 p {
   margin-bottom: 10px;
+  color: white; /* Set the font color to white */
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black; /* Apply the outline effect */
 }
 
 a {
@@ -98,7 +129,6 @@ a {
   margin-top: 5px;
 }
 
-
 /* Company Bullet formatting */
 p.company-heading {
   margin-top: 0;
@@ -112,7 +142,6 @@ ul.company-list {
   width: 100%;
   height: auto;
 }
-
 
 /* Tab Container Styles */
 .tab-container {
@@ -148,7 +177,7 @@ ul.company-list {
 
 /* Add hover effect to the navigation menu */
 .tab:hover {
-  background-color: #444;
+  background-color: #003f83;
 }
 
 /* Contact Links Styles */
@@ -170,16 +199,15 @@ ul.company-list {
   text-align: center;
   text-decoration: none;
   border-radius: 5px;
-  color: #ffffff;
-  background-color: #007bff;
+  color: #e7e7e7;
+  background-color: #1b3edc;
   border: none;
   transition: background-color 0.3s ease;
 }
 
 .contact-links a.button-link:hover {
-  background-color: #0056b3;
+  background-color: #1685fc;
 }
-
 
 /* Content Styles */
 .content {
@@ -202,13 +230,12 @@ ul.company-list {
   margin-bottom: 50px;
 }
 
-
 /* Footer Styles */
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
   height: px; /* Adjust the height as desired */
-  background-color: #000; /* Set the background color of the footer to black */
+  background-color: #000000; /* Set the background color of the footer to black */
   color: #dbdbdb; /* Set the text color of the footer */
 }
