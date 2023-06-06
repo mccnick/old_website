@@ -18,13 +18,16 @@ body {
 
 .scrolling-container {
   width: 100%;
-  overflow: hidden;
+  overflow: auto;
   position: relative;
+  white-space: nowrap;
 }
 
 .company-list {
-  display: flex;
-  animation: scroll-left 30s linear infinite;
+  display: inline-flex;
+  animation: scroll-left 45s linear infinite;
+  white-space: nowrap; /* Prevent wrapping of elements */
+  flex-wrap: wrap-reverse;
 }
 
 @keyframes scroll-left {
@@ -35,12 +38,6 @@ body {
     transform: translateX(-100%);
   }
 }
-
-.company-container {
-  flex: 0 0 calc(33.33% - 10px);
-  margin-right: 10px;
-}
-
 
 /* Container Styles */
 .container,
