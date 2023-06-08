@@ -16,29 +16,6 @@ body {
   background-size: cover;
 }
 
-.scrolling-container {
-  width: 100%;
-  overflow: auto;
-  position: relative;
-  white-space: nowrap;
-}
-
-.company-list {
-  display: inline-flex;
-  animation: scroll-left 45s linear infinite;
-  white-space: nowrap; /* Prevent wrapping of elements */
-  flex-wrap: wrap-reverse;
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
 /* Container Styles */
 .container,
 .welcome-container,
