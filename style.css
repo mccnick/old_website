@@ -172,13 +172,13 @@ ul.company-list {
   text-decoration: none;
   border-radius: 5px;
   color: #e7e7e7;
-  background-color: #1b3edc;
+  background-color: #183fea;
   border: none;
   transition: background-color 0.3s ease;
 }
 
 .contact-links a.button-link:hover {
-  background-color: #1685fc;
+  background-color: #1a87fc;
 }
 
 /* Content Styles */
